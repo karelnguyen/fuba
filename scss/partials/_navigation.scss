@@ -7,25 +7,36 @@
   ------------------------
 */
 
-
 nav {
   height: 212px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  z-index: 9000;
   display: flex;
   align-items: center;
-  position: relative;
+  transition-duration: 1s;
   @include breakpoint(desktop) {
     width: 100%;
     justify-content: space-between;
   }
   @include breakpoint(laptop) {
     height: 70px;
-    background-color: $black;
+    background-color: black;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 9000;
+  }
+
+  .nav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    @include breakpoint(desktop) {
+      width: 100%;
+      justify-content: space-between;
+    }
+    @include breakpoint(laptop) {
+      position: fixed;
+    }
   }
 
   .logo-box {
@@ -84,9 +95,7 @@ nav {
     }
 
     .dots {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: none;
       margin-top: 5px;
       position: absolute;
 
@@ -130,6 +139,9 @@ nav {
 
     li:hover {
       color: $white;
+      .dots {
+        display: flex;
+      }
     }
 
     .right-a-li {
@@ -180,13 +192,13 @@ nav {
       }
     }
 
-    .lang-box-wrapper {
+    #lang-box-wrapper {
       position: absolute;
       margin-top: 35px;
       margin-right: -24px;
       right: 0;
       display: none;
-      z-index: 9;
+      z-index: 9000;
       @include breakpoint(desktop) {
         margin-right: 6px;
       }

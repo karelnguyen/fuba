@@ -14,72 +14,92 @@
     <title>Future Bakers</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
-
   <body>
+
+    <div id="mobile-menu">
+      <div class="mobile-menu-content">
+        <ul>
+          <li>Úvod</li>
+          <li>Projekty</li>
+          <li>Co jsme dokázali</li>
+          <li>O nás</li>
+          <li>Přihlášení</li>
+        </ul>
+        <button class="button-yellow">Registrace</button>
+        <div class="mob-lang-icons">
+          <div class="lang-box-icon1"></div>
+          <div class="lang-box-icon2"></div>
+          <div class="lang-box-icon3"></div>
+        </div>
+      </div>
+    </div>
+
     <header>
       <div class="container">
-        <nav>
-          <div class="logo-box"></div>
-          <button class="hamburger hamburger--spin" type="button"
-          aria-label="Menu" aria-controls="navigation">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <ul>
-            <li id="link1">Úvod
-              <div class="dots dots1">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+        <nav id="nav">
+          <div class="nav-content">
+            <div class="logo-box"></div>
+            <button id="hamb-btn" onclick="hambClick()" class="hamburger hamburger--spin" type="button"
+            aria-label="Menu" aria-controls="navigation">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <ul>
+              <li id="link1">Úvod
+                <div class="dots dots1">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </li>
+              <li id="link2">Projekty
+                <div class="dots dots2">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </li>
+              <li id="link3">Co jsme dokázali
+                <div class="dots dots3">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </li>
+              <li id="link4">O nás
+                <div class="dots dots4">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </li>
+              <li id="link5" class="right-a-li">Přihlášení
+                <div class="dots dots5">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </li>
+              <button class="button-yellow">Registrace</button>
+            </ul>
+            <div class="nav-lang-wrapper">
+              <div class="nav-lang">
+                <div id="show-lang-box" onclick="langBoxClick()" class="lang"></div>
+                <div class="nav-triangle" onclick="langBoxClick()"></div>
               </div>
-            </li>
-            <li id="link2">Projekty
-              <div class="dots dots2">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </li>
-            <li id="link3">Co jsme dokázali
-              <div class="dots dots3">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </li>
-            <li id="link4">O nás
-              <div class="dots dots4">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </li>
-            <li id="link5" class="right-a-li">Přihlášení
-              <div class="dots dots5">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </li>
-            <button class="button-yellow">Registrace</button>
-          </ul>
-          <div class="nav-lang-wrapper">
-            <div class="nav-lang">
-              <div id="show-lang-box" class="lang"></div>
-              <div class="nav-triangle"></div>
-            </div>
-            <div class="lang-box-wrapper">
-              <div class="lang-triangle"></div>
-              <div class="lang-box">
-                <div class="lang-box-item"><div class="lang-box-icon1"></div><div>Česky</div></div>
-                <div class="lang-box-item"><div class="lang-box-icon2"></div><div>Maďarsky</div></div>
-                <div class="lang-box-item"><div class="lang-box-icon3"></div><div>Slovensky</div></div>
+              <div id="lang-box-wrapper">
+                <div class="lang-triangle"></div>
+                <div class="lang-box">
+                  <div class="lang-box-item"><div class="lang-box-icon1"></div><div>Česky</div></div>
+                  <div class="lang-box-item"><div class="lang-box-icon2"></div><div>Maďarsky</div></div>
+                  <div class="lang-box-item"><div class="lang-box-icon3"></div><div>Slovensky</div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -102,26 +122,7 @@
       </div>
     </header>
 
-    <div id="mobile-menu">
-      <div class="mobile-menu-content">
-        <ul>
-          <li>Úvod</li>
-          <li>Projekty</li>
-          <li>Co jsme dokázali</li>
-          <li>O nás</li>
-          <li>Přihlášení</li>
-        </ul>
-        <button class="button-yellow">Registrace</button>
-        <div class="mob-lang-icons">
-          <div class="lang-box-icon1"></div>
-          <div class="lang-box-icon2"></div>
-          <div class="lang-box-icon3"></div>
-        </div>
-      </div>
-    </div>
-
     <div id="content">
-
       <section id="section1">
         <div class="container">
           <div class="section1-content">
@@ -163,7 +164,7 @@
                 </div>
               </div>
             </div>
-            <button class="button-yellow">Více projektů <img src="../img/right-arrow.svg" alt=""/></button>
+            <button class="button-yellow">Více projektů <img src="img/right-arrow.svg" alt=""/></button>
           </div>
         </div>
       </section>
@@ -234,8 +235,8 @@
             </div>
           </div>
           <div class="button-group">
-            <button class="button-yellow">Co jsme spolu dokázali <img src="../img/right-arrow.svg" alt=""/></button>
-            <button class="button-classic">Všechny realizované projekty <img src="../img/right-arrow.svg" alt=""/></button>
+            <button class="button-yellow">Co jsme spolu dokázali <img src="img/right-arrow.svg" alt=""/></button>
+            <button class="button-classic">Všechny realizované projekty <img src="img/right-arrow.svg" alt=""/></button>
           </div>
         </div>
       </section>
@@ -244,6 +245,7 @@
         <div class="container">
           <h2>Pečou s námi</h2>
           <div class="toggle-page">
+
             <div id="page1">
               <div class="grid-x grid-margin-x grid-system-3">
                 <div class="small-6 medium-4 large-2 cell">
@@ -283,8 +285,8 @@
                   <img src="http://via.placeholder.com/120x120" alt="placeholder"/>
                 </div>
               </div>
-
             </div>
+
             <div id="page2">
               <div class="grid-x grid-margin-x grid-system-3">
                 <div class="small-6 medium-4 large-2 cell">
@@ -324,15 +326,15 @@
                   <img src="http://via.placeholder.com/120x120" alt="placeholder"/>
                 </div>
               </div>
-
             </div>
+
           </div>
           <div class="paginav">
-            <div class="previous"><img src="img/right-arrow.svg" alt="predchozi stranka"/> Předchozí</div>
+            <div onclick="togglePage1()" class="previous"><img src="img/right-arrow.svg" alt="predchozi stranka"/> Předchozí</div>
             <div class="paginumb">
-                <div id="1" class="paginumb1">1</div><div id="2" class="paginumb2">2</div>
+                <div id="1" onclick="togglePage1()" class="paginumb1 active">1</div><div onclick="togglePage2()" id="2" class="paginumb2">2</div>
             </div>
-            <div class="next">Následující<img src="img/right-arrow.svg" alt="nasledujici stranka"/></div>
+            <div onclick="togglePage2()" class="next">Následující<img src="img/right-arrow.svg" alt="nasledujici stranka"/></div>
           </div>
         </div>
       </section>
@@ -375,10 +377,11 @@
         <div class="footer-circle-3"></div>
       </div>
     </footer>
-
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/what-input/dist/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

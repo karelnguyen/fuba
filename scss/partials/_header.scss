@@ -11,6 +11,7 @@ header {
   background-image: url('../img/bc.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 8000;
   @include breakpoint(tablet) {
     height: 100vh;
   }
@@ -42,6 +43,7 @@ header {
     .hero-boy {
       margin-left: 130px;
       margin-top: 50px;
+      z-index: 8000;
 
       @include breakpoint(desktop) {
         display: none;

@@ -13,7 +13,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yrsa:300,400,500,600');
 @font-face {
     font-family: "Bree-Regular";
-    src: url("/scss/assets/font/Bree.otf");
+    src: url("assets/font/Bree.otf");
     font-style: normal;
 }
 
@@ -72,7 +72,7 @@ body {
   li {
     cursor: pointer;
   }
-  
+
   // grid text:
   .cell-text {
   	width: 315px;
@@ -109,7 +109,14 @@ body {
     font-size: $font-size-small;
     text-align: center;
     cursor: pointer;
+    transition-duration: 1s;
+  }
 
+  .button-classic:hover {
+    transform: scale(1.1);
+    background-color: $color-yellow;
+    border: none;
+    color: $color-light-black;
   }
 
   .button-yellow {
@@ -125,5 +132,10 @@ body {
     font-size: $font-size-medium;
     text-align: center;
     cursor: pointer;
+    transition-duration: 1s;
+  }
+
+  .button-yellow:hover {
+    transform: scale(1.1);
   }
 }

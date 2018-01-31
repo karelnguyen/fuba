@@ -7,8 +7,6 @@
   ------------------------
 */
 
-@import '../modules/variables';
-@import '../modules/mixins';
 
 #content {
   background-color: white;
@@ -275,7 +273,6 @@
         color: $black;
         height: 45px;
         margin-top: 60px;
-        padding: 0;
         margin-left: 75px;
         display: flex;
         align-items: center;
@@ -395,5 +392,5 @@
       background-color: $color-yellow;
       border-radius: 100%;
     }
-  }    
+  }
 }

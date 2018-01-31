@@ -14,10 +14,9 @@
   background-color: $black;
   height: 100%;
   width: 100%;
-  z-index: 4;
+  z-index: 9999;
   top: 70px;
   left: 0;
-  overflow: hidden;
 
 
   .mobile-menu-content {
@@ -27,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 
     ul {
       padding: 0;
@@ -39,12 +39,17 @@
       font-family: $font1;
       font-size: $font-size-xxlarge;
 
+
       li {
         margin: 7px;
+        transition-duration: 0.6s;
+      }
+
+      li:hover {
+        color: $color-yellow;
       }
 
       li:last-child {
-        margin-top: 60px;
       }
     }
     button {

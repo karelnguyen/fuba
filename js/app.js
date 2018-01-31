@@ -1,77 +1,60 @@
-/*
-  ------------------------
-  FILE: app.js
-  CREATED: 04.12.2017
-  CREATED BY: Karel Nguyen
-  VERSION: 1.00
-  ------------------------
-*/
 
-$(document).foundation();
 
-$(document).ready(function() {
-    $(".dots").hide();
-    $("#1").addClass("active");
+//check if element has class
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+};
 
-//dots animation on hover
-    $("#link1").hover(function() {
-      $(".dots1").fadeIn()
-    }, function() {
-      $(".dots1").hide()
-    });
+//todo pure js hamb
+function hambClick() {
+  let hambBtn = document.getElementById('hamb-btn');
+  let menu = document.getElementById('mobile-menu');
+  let bodyScroll = document.querySelector('body');
 
-    $("#link2").hover(function() {
-      $(".dots2").fadeIn()
-    }, function() {
-      $(".dots2").hide()
-    });
+  hambBtn.classList.toggle("is-active");
 
-    $("#link3").hover(function() {
-      $(".dots3").fadeIn()
-    }, function() {
-      $(".dots3").hide()
-    });
+  if (hasClass(hambBtn, 'is-active') === true) {
+    menu.style.display = 'flex';
+    bodyScroll.style.overflow = 'hidden';
+  } else {
+    menu.style.display = 'none';
+    bodyScroll.style.overflow = 'auto';
+  }
+};
 
-    $("#link4").hover(function() {
-      $(".dots4").fadeIn()
-    }, function() {
-      $(".dots4").hide()
-    });
+//toggle language box
+function langBoxClick() {
+  let x = document.getElementById('lang-box-wrapper');
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
+  } else {
+    x.style.display = 'none';
+  }
+};
 
-    $("#link5").hover(function() {
-      $(".dots5").fadeIn()
-    }, function() {
-      $(".dots5").hide()
-    });
+//toggle pages section4
+function togglePage1() {
+  const num1 = document.getElementById('1');
+  const num2 = document.getElementById('2');
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  num2.classList.remove('active');
+  num1.classList.add('active');
+  $(page2).hide();
+  $(page1).fadeIn();
+}
 
-// toggle language box
-    $("#show-lang-box, .nav-triangle").click(function() {
-      $(".lang-box-wrapper").toggle()
-    });
+function togglePage2() {
+  const num1 = document.getElementById('1');
+  const num2 = document.getElementById('2');
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  num1.classList.remove('active');
+  num2.classList.add('active');
+  $(page1).hide();
+  $(page2).fadeIn();
+}
 
-// toggle pages section4
-    $("#1, .previous").click(function() {
-      $("#1").addClass("active");
-      $("#2").removeClass("active");
-      $("#page2").hide();
-      $("#page1").fadeIn(300)
-    })
 
-    $("#2, .next").click(function() {
-      $("#2").addClass("active");
-      $("#1").removeClass("active");
-      $("#page1").hide();
-      $("#page2").fadeIn(300)
-    })
-
-// hamburger icon
-    var $hamburger = $(".hamburger");
-    $hamburger.on("click", function(e) {
-      $hamburger.toggleClass("is-active");
-      if ($hamburger.hasClass("is-active")) {
-         $("#mobile-menu").fadeIn(300)
-       } else {
-         $("#mobile-menu").fadeOut(300)
-       }
-    });
-});
+window.sr = ScrollReveal({ reset: true });
+sr.reveal('.hero-content');
