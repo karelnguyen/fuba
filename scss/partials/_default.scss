@@ -1,0 +1,129 @@
+/*
+  ------------------------
+  FILE: _default.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+
+  (my own default settings)
+  ------------------------
+*/
+
+// fonts:
+@import url('https://fonts.googleapis.com/css?family=Yrsa:300,400,500,600');
+@font-face {
+    font-family: "Bree-Regular";
+    src: url("/scss/assets/font/Bree.otf");
+    font-style: normal;
+}
+
+
+// global styles:
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+  .container {
+    width: 1290px;
+    margin: 0 auto;
+    @include breakpoint(desktop) {
+      width: 100%;
+      height: auto;
+
+    }
+  }
+
+// typography:
+  h1 {
+    margin: 0;
+    font-size: $h1-size;
+    font-family: $font2;
+    color: $white;
+    letter-spacing: $letter-spacing-1;
+    font-weight: $light;
+  }
+
+  h2 {
+    font-size: $h2-size;
+    font-family: $font2;
+    letter-spacing: $letter-spacing-1;
+    font-weight: $light;
+    margin-top: 74px;
+    @include breakpoint (desktop) {
+      margin-left: 100px;
+    }
+
+    @include breakpoint (tablet) {
+      margin: 0;
+      margin-top: 74px;
+      text-align: center;
+    }
+  }
+
+  p {
+    font-family: $font1;
+    letter-spacing: $letter-spacing-1;
+  }
+
+  li {
+    cursor: pointer;
+  }
+  
+  // grid text:
+  .cell-text {
+  	width: 315px;
+  	color: $black;
+  	font-family: $font2;
+  	font-size: $font-size-large;
+    font-weight: bold;
+  	text-align: center;
+    position: relative;
+    @include breakpoint(tablet) {
+      width: 90%;
+    }
+  }
+
+  .cell-text2 {
+    height: 25px;
+    color: $color-light-black2;
+    font-family: $font1;
+    font-size: $font-size-medium;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+// buttons:
+  .button-classic {
+    border-radius: 100px;
+    padding: 14px;
+    padding-left: 34px;
+    padding-right: 34px;
+    font-family: $font2;
+    background: none;
+    border: 2px solid $special-white;
+    color: $white;
+    font-size: $font-size-small;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  .button-yellow {
+    border-radius: 100px;
+    padding: 14px;
+    padding-left: 34px;
+    padding-right: 34px;
+    font-family: $font2;
+  	background-color: $color-yellow;
+  	box-shadow: 0 0 13px 1px rgba(115,125,142,0.5);
+    border: none;
+    color: $color-light-black;
+    font-size: $font-size-medium;
+    text-align: center;
+    cursor: pointer;
+  }
+}

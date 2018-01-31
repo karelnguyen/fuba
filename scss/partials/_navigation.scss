@@ -1,0 +1,257 @@
+/*
+  ------------------------
+  FILE: _navigation.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+  ------------------------
+*/
+
+
+nav {
+  height: 212px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include breakpoint(desktop) {
+    width: 100%;
+    justify-content: space-between;
+  }
+  @include breakpoint(laptop) {
+    height: 70px;
+    background-color: $black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9000;
+  }
+
+  .logo-box {
+    width: 120px;
+    height: 120px;
+    background-image: url('../img/FuBas-logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include breakpoint(desktop) {
+      margin: 0;
+      margin-left: 30px;
+    }
+    @include breakpoint(laptop) {
+      margin: 0;
+      height: 60px;
+      width: 60px;
+      margin-left: 15px;
+    }
+    @include retina {
+      background-image: url('../img/FuBas-logo@2x.png');
+    }
+  }
+
+  .hamburger {
+    display: none;
+    @include breakpoint(laptop) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  ul {
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 101px;
+    font-family: $font1;
+    font-size: $font-size-large;
+    list-style-type: none;
+    padding: 0;
+    color: $nav-grey;
+    letter-spacing: $letter-spacing-1;
+
+    @include breakpoint(desktop) {
+      margin: 0;
+      width: 70%;
+      justify-content: space-between;
+    }
+    @include breakpoint(laptop) {
+      display: none;
+    }
+
+    .dots {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 5px;
+      position: absolute;
+
+      .dot {
+        border-radius: 50%;
+        width: 3px;
+        height: 3px;
+        background-color: $color-yellow;
+        margin-left: 3px;
+      }
+    }
+
+    .dots1 {
+      margin-left: 10px;
+    }
+
+    .dots2 {
+      margin-left: 23px;
+    }
+
+    .dots3 {
+      margin-left: 60px;
+    }
+
+    .dots4 {
+      margin-left: 13px;
+    }
+
+    .dots5 {
+      margin-left: 33px;
+    }
+
+    li {
+      margin-right: 70px;
+      white-space: nowrap;
+      cursor: pointer;
+      @include breakpoint(desktop) {
+        margin: 0;
+      }
+    }
+
+    li:hover {
+      color: $white;
+    }
+
+    .right-a-li {
+      margin-left: 119px;
+      margin-right: 21px;
+      @include breakpoint(desktop) {
+        margin: 0;
+      }
+    }
+  }
+
+  .nav-lang-wrapper {
+    position: relative;
+
+    .nav-lang {
+      display: flex;
+      align-items: center;
+    }
+
+    .lang {
+      background-image: url("../img/lang-us.png");
+      height: 27px;
+      width: 27px;
+      margin-left: 20px;
+      cursor: pointer;
+      @include breakpoint(laptop) {
+        display: none;
+      }
+      @include retina {
+        background-image: url("../img/lang-us@2x.png");
+        background-size: contain;
+      }
+    }
+
+    .nav-triangle {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $white;
+      margin-left: 19px;
+      cursor: pointer;
+      @include breakpoint(desktop) {
+        margin-right: 30px;
+      }
+      @include breakpoint(laptop) {
+        display: none;
+      }
+    }
+
+    .lang-box-wrapper {
+      position: absolute;
+      margin-top: 35px;
+      margin-right: -24px;
+      right: 0;
+      display: none;
+      z-index: 9;
+      @include breakpoint(desktop) {
+        margin-right: 6px;
+      }
+
+      .lang-triangle {
+        position: absolute;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 13px solid $white;
+        margin-top: -12px;
+        margin-left: 117px;
+        overflow: hidden;
+      }
+
+      .lang-box {
+        height: 168px;
+        width: 193px;
+        border-radius: 4px;
+        background-color: $white;
+        z-index: 2;
+
+        .lang-box-item {
+          height: 33.3%;
+          font-family: $font2;
+          font-size: $font-size-medium;
+          display: flex;
+          align-items: center;
+          padding-left: 23px;
+          cursor: pointer;
+          position: relative;
+
+          .lang-box-icon1, .lang-box-icon2, .lang-box-icon3 {
+            background-size: cover;
+            height: 30px;
+            width: 30px;
+            z-index: 3;
+            margin-right: 23px;
+          }
+
+          .lang-box-icon1 {
+            background-image: url("../img/lang-cz.png");
+            @include retina {
+              background-image: url("../img/lang-cz@2x.png");
+            }
+          }
+
+          .lang-box-icon2 {
+            background-image: url("../img/lang-hu.png");
+            @include retina {
+              background-image: url("../img/lang-hu@2x.png");
+            }
+          }
+
+          .lang-box-icon3 {
+            background-image: url("../img/lang-sk.png");
+            @include retina {
+              background-image: url("../img/lang-sk@2x.png");
+            }
+          }
+        }
+
+        .lang-box-item:hover {
+          background-color: $color-yellow;
+        }
+      }
+    }
+  }
+}

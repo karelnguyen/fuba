@@ -1,0 +1,202 @@
+/*
+  ------------------------
+  FILE: _footer.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+  ------------------------
+*/
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  background: rgba(213, 222, 34, .7);
+  overflow: hidden;
+  @include breakpoint(tablet) {
+    overflow: visible;
+    height: auto;
+  }
+
+  .container {
+    position: relative;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-content {
+    padding-top: 70px;
+    position: absolute;
+    display: flex;
+    @include breakpoint(desktop) {
+      justify-content: space-around;
+      left: 40px;
+      right: 40px;
+    }
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .fuba-black {
+      z-index: 2;
+      background-color: $color-yellow;
+      border-radius: 100%;
+    }
+
+    .footer-ul-1 {
+      margin-left: 190px;
+      margin-right: 175px;
+      @include breakpoint (desktop) {
+        margin: 0;
+      }
+      @include breakpoint(tablet) {
+        margin-top: 30px;
+      }
+    }
+
+    .footer-ul-2 {
+      margin-right: 192px;
+      @include breakpoint (desktop) {
+        margin: 0;
+      }
+      @include breakpoint(tablet) {
+        margin-top: 30px;
+      }
+    }
+
+    .footer-ul-3 {
+      li {
+        display: flex;
+        align-items: center;
+
+        img{
+          margin-right: 20px;
+        }
+      }
+      @include breakpoint (desktop) {
+        margin: 0;
+      }
+      @include breakpoint(tablet) {
+        margin-top: 30px;
+      }
+    }
+
+    ul {
+      font-size: $font-size-xxlarge;
+      font-family: $font2;
+      padding: 0;
+
+      .footer-title {
+        margin-bottom: 22px;
+        @include breakpoint(tablet) {
+          margin-bottom: 8px;
+        }
+      }
+
+      li {
+        font-size: $font-size-medium;
+        font-family: $font1;
+        color: $footer-li-color;
+        list-style-type: none;
+        margin-bottom: 15px;
+        @include breakpoint(tablet) {
+          margin: 4px;
+        }
+      }
+    }
+  }
+
+  .footer-content-bottom {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-top: 376px;
+    z-index: 3;
+    font-size: $font-size-small;
+    font-family: $font1;
+    @include breakpoint(tablet) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .footer-content-bottom-left {
+      @include breakpoint (desktop) {
+        margin-left: 50px;
+      }
+      @include breakpoint(tablet) {
+        margin: auto;
+      }
+    }
+
+    .footer-content-bottom-right{
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      @include breakpoint(tablet) {
+        margin: auto;
+        margin-top: 30px;
+      }
+    }
+
+    img {
+      margin-left: 7px;
+      @include breakpoint (desktop) {
+        margin-right: 50px;
+      }
+      @include breakpoint(tablet) {
+        margin: auto;
+      }
+    }
+  }
+
+
+  .footer-circles-wrapper {
+    position: absolute;
+    height: 100%;
+    @include breakpoint(laptop) {
+      display: none;
+    }
+
+    .footer-circle-1 {
+      position: absolute;
+      border-radius: 100%;
+      background: rgba(213, 222, 34, .47);
+      width: 626px;
+      height: 626px;
+      margin-top: 59px;
+      margin-left: -313px;
+    }
+
+    .footer-circle-2 {
+      position: absolute;
+      border-radius: 100%;
+      background: rgba(213, 222, 34, .36);
+      width: 456px;
+      height: 456px;
+      margin-top: 282px;
+      margin-left: -15px;
+    }
+
+    .footer-circle-3 {
+      position: absolute;
+      border-radius: 100%;
+      background-color: $color-light-black;
+      opacity: 0.09;
+      width: 322px;
+      height: 322px;
+      margin-top: 253px;
+      margin-left: -176px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+/*
+  ------------------------
+  FILE: _header.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+  ------------------------
+*/
+
+header {
+  background-image: url('../img/bc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(tablet) {
+    height: 100vh;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  // hero content
+  .hero-content {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: flex;
+    @include breakpoint(desktop) {
+      margin: 100px;
+      margin-top: 0;
+    }
+    @include breakpoint(laptop) {
+      margin: 100px;
+      margin-top: 70px;
+    }
+    @include breakpoint(tablet) {
+      margin: 20px;
+      margin-top: 70px;
+      justify-content: center;
+    }
+
+    .hero-boy {
+      margin-left: 130px;
+      margin-top: 50px;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+
+    .hero-left {
+      margin-bottom: 53px;
+      @include breakpoint(tablet) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      h1 {
+        width: 478px;
+        height: 110px;
+        margin-top: 46px;
+        @include breakpoint(mobile) {
+          width: 100%;
+          height: auto;
+          font-size: 35px;
+        }
+      }
+
+      .header-h1-yellow {
+        color: $color-yellow;
+        width: auto;
+        display: inline-block;
+      }
+
+      p {
+      	height: 60px;
+      	width: 487px;
+      	color: $white;
+      	font-size: $font-size-xlarge;
+        @include breakpoint(tablet) {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      button {
+        margin-top: 59px;
+        margin-right: 35px;
+        @include breakpoint(tablet) {
+          margin: 0;
+          margin-top: 20px;
+        }
+      }
+
+      .hero-arrow {
+        display: flex;
+        align-items: center;
+      	color: $white;
+      	font-family: $font1;
+      	font-size: $font-size-large;
+      	letter-spacing: $letter-spacing-1;
+        margin-top: 39px;
+        @include breakpoint(tablet) {
+          margin-top: 20px;
+        }
+
+        img {
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+}

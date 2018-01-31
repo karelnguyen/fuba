@@ -1,0 +1,90 @@
+/*
+  ------------------------
+  FILE: _mobile-menu.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+  ------------------------
+*/
+
+// mobile menu:
+#mobile-menu {
+  display: none;
+  position: fixed;
+  background-color: $black;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  top: 70px;
+  left: 0;
+  overflow: hidden;
+
+
+  .mobile-menu-content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $special-white;
+      list-style-type: none;
+      font-family: $font1;
+      font-size: $font-size-xxlarge;
+
+      li {
+        margin: 7px;
+      }
+
+      li:last-child {
+        margin-top: 60px;
+      }
+    }
+    button {
+      width: 50%;
+    }
+
+    .mob-lang-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .lang-box-icon1, .lang-box-icon2, .lang-box-icon3 {
+      background-size: cover;
+      height: 30px;
+      width: 30px;
+      z-index: 3;
+      margin-right: 23px;
+    }
+
+    .lang-box-icon1 {
+      background-image: url("../img/lang-cz.png");
+      @include retina {
+        background-image: url("../img/lang-cz@2x.png");
+      }
+    }
+
+    .lang-box-icon2 {
+      background-image: url("../img/lang-hu.png");
+      @include retina {
+        background-image: url("../img/lang-hu@2x.png");
+      }
+    }
+
+    .lang-box-icon3 {
+      background-image: url("../img/lang-sk.png");
+      margin: 0;
+      @include retina {
+        background-image: url("../img/lang-sk@2x.png");
+      }
+    }
+  }
+}

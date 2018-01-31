@@ -1,0 +1,39 @@
+/*
+  ------------------------
+  FILE: _mixins.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+  ------------------------
+*/
+
+//media queries for device sizes:
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (max-width: $breakpoint-desktop) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (max-width: $breakpoint-laptop) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (max-width: $breakpoint-tablet) { @content ; }
+  }
+   @else if $point == mobile {
+     @media (max-width: $breakpoint-phone)  { @content ; }
+  }
+}
+//------------------------
+
+//retina media query:
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+//------------------------

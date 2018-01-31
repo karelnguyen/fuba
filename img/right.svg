@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="FUBA-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HP" transform="translate(-478.000000, -1464.000000)" stroke="#1F1E2D">
+            <g id="CONTENT" transform="translate(-16.000000, 768.000000)">
+                <g id="aktuální-projekty" transform="translate(331.000000, 0.000000)">
+                    <g id="more" transform="translate(2.000000, 675.000000)">
+                        <g id="right" transform="translate(161.000000, 22.000000)">
+                            <path d="M9.16923077,9 C9.13846154,9 9.07692308,9 9.04615385,8.96392786 C8.98461538,8.89178357 8.98461538,8.78356713 9.04615385,8.71142285 L12.6461538,4.49098196 L9.04615385,0.306613226 C8.98461538,0.234468938 8.98461538,0.126252505 9.04615385,0.0541082164 C9.10769231,-0.0180360721 9.2,-0.0180360721 9.26153846,0.0541082164 L12.9538462,4.38276553 C13.0153846,4.45490982 13.0153846,4.56312625 12.9538462,4.63527054 L9.26153846,8.96392786 C9.26153846,9 9.2,9 9.16923077,9 Z" id="Shape" fill-rule="nonzero"></path>
+                            <path d="M0.5,4.5 L11.5,4.5" id="Line" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

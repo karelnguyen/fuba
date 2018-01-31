@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="17px" viewBox="0 0 15 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="FUBA-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HP" transform="translate(-416.000000, -616.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="TOP" transform="translate(-681.000000, -6.000000)">
+                <g id="vizuál">
+                    <g id="more-btn" transform="translate(1002.000000, 526.000000)">
+                        <g id="arrow_down" transform="translate(95.000000, 96.000000)">
+                            <g id="down">
+                                <path d="M7.53,17 C7.47,17 7.35,17 7.29,16.9474903 L0.09,10.646332 C-0.03,10.5413127 -0.03,10.3837838 0.09,10.2787645 C0.21,10.1737452 0.39,10.1737452 0.51,10.2787645 L7.53,16.3698842 L14.49,10.2787645 C14.61,10.1737452 14.79,10.1737452 14.91,10.2787645 C15.03,10.3837838 15.03,10.5413127 14.91,10.646332 L7.71,16.9474903 C7.71,17 7.59,17 7.53,17 Z" id="Shape"></path>
+                                <path d="M7.21153846,17 C7.03846154,17 6.92307692,16.8866667 6.92307692,16.7166667 L6.92307692,0.283333333 C6.92307692,0.113333333 7.03846154,0 7.21153846,0 C7.38461538,0 7.5,0.113333333 7.5,0.283333333 L7.5,16.7166667 C7.5,16.8866667 7.38461538,17 7.21153846,17 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,399 @@
+/*
+  ------------------------
+  FILE: _content.scss
+  CREATED: 04.12.2017
+  CREATED BY: Karel Nguyen
+  VERSION: 1.00
+  ------------------------
+*/
+
+@import '../modules/variables';
+@import '../modules/mixins';
+
+#content {
+  background-color: white;
+  margin-bottom: 68px;
+	position: relative;
+
+  #section1, #section3 {
+    .grid-system-1 {
+      @include breakpoint (desktop) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+      .cell {
+        position: relative;
+        height: 479px;
+        color: white;
+        margin-top: 92px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 5px 30px -3px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 5px 30px -3px rgba(0,0,0,0.25);
+        box-shadow: 0px 5px 30px -3px rgba(0,0,0,0.25);
+
+        img {
+          border-radius: 100%;
+          margin-top: -34px;
+        }
+
+        .cell-box {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .cell-text {
+            margin-bottom: 22px;
+            padding-top: 50px;
+          }
+
+          .cell-number {
+            height: 34px;
+            width: 130px;
+            border-radius: 10px;
+            background-color: $color-yellow;
+            color: $color-light-black2;
+            font-family: $font1;
+            font-size: $font-size-medium;
+            font-weight: $bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .cell-box-bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 401px;
+          .section1-cell-text2 {
+            margin-bottom: 9px;
+          }
+
+          .progress-bar-bc {
+            position: relative;
+            height: 7px;
+            width: 361px;
+            border-radius: 3.5px;
+            background-color: $special-white;
+            @include breakpoint(desktop) {
+              width: 90%;
+            }
+
+            .progress-bar {
+              height: 7px;
+              width: 331px;
+              border-radius: 3.5px;
+              background-color: $color-yellow;
+              @include breakpoint(desktop) {
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .button-yellow {
+      height: 52px;
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      box-shadow: none;
+      @include breakpoint (desktop) {
+        margin-left: 100px;
+      }
+      @include breakpoint (tablet) {
+        margin: auto;
+        margin-top: 60px;
+      }
+      img {
+        width: 14px;
+        margin-left: 19px;
+      }
+    }
+  }
+
+  //------------------------
+  #section2 {
+    height: 655px;
+    background-color: $color-section2-bc;
+    margin-top: 60px;
+
+    @include breakpoint (laptop) {
+      height: auto;
+    }
+
+    .container {
+      height: 100%;
+      position: relative;
+
+      @include breakpoint (desktop) {
+        background: none;
+      }
+      @include breakpoint (laptop) {
+        padding-bottom: 170px;
+      }
+
+      .section2-bc-box {
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/section2-bc.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        opacity: 0.3;
+        z-index: 1;
+        @include breakpoint(laptop) {
+          display: none;
+        }
+
+      }
+
+      h2 {
+        color: $color-yellow;
+        z-index: 3;
+        position: absolute;
+        @include breakpoint (desktop) {
+          margin-left: 100px;
+        }
+
+        @include breakpoint (tablet) {
+          width: 100%;
+          margin: 0;
+          margin-top: 74px;
+          text-align: center;
+        }
+      }
+
+      .grid-system-2 {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding-top: 140px;
+        @include breakpoint(desktop) {
+          width: 100%;
+        }
+
+        .cell {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          @include breakpoint(laptop) {
+            margin-bottom: 40px;
+          }
+
+          .section2-circle {
+            display: flex;
+            align-items: center;
+            border-radius: 100%;
+            width: 310px;
+            height: 310px;
+            background: rgba(141, 157, 181, .1);
+            position: absolute;
+            margin-top: 40px;
+            z-index: 1;
+          }
+
+          .section2-circle-content {
+            width: 310px;
+            height: 310px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .section2-icon {
+              width: 42px;
+              height: 40px;
+              margin-bottom: 36px;
+              z-index: 3;
+              margin-top: 80px;
+            }
+
+            .section2-number {
+              color: white;
+              font-family: $font2;
+              font-size: $font-size-xlarge;
+              z-index: 3;
+            }
+
+            .section2-text {
+              color: white;
+              font-family: $font1;
+              font-size: $font-size-medium;
+              margin-top: 11px;
+              z-index: 3;
+            }
+          }
+        }
+      }
+      .section2-more {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-family: $font2;
+        font-size: $font-size-medium;
+        color: $color-grey;
+        z-index: 3;
+        margin-top: 100px;
+        @include breakpoint (desktop) {
+          margin-left: 100px;
+        }
+
+        .section2-arrow {
+          width: 16px;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+
+  //------------------------
+  #section3 {
+    .section3-cell-text2 {
+      margin-top: 436px;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      @include breakpoint (tablet) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button-classic {
+        font-size: $font-size-medium;
+        border: none;
+        color: $black;
+        height: 45px;
+        margin-top: 60px;
+        padding: 0;
+        margin-left: 75px;
+        display: flex;
+        align-items: center;
+        @include breakpoint (tablet) {
+          margin: auto;
+          margin-top: 20px;
+        }
+
+        img {
+          width: 14px;
+          margin-left: 19px;
+        }
+      }
+    }
+  }
+
+  //------------------------
+  #section4 {
+    margin-top: 82px;
+
+    .grid-system-3 {
+      width: 100%;
+      margin: auto;
+      margin-top: 30px;
+
+
+      .cell {
+        height: 150px;
+        min-width: 170px;
+        margin: auto;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+      }
+    }
+
+    #page1 {
+      position: relative;
+    }
+
+    #page2 {
+      display: none;
+      position: relative;
+    }
+
+    .paginav {
+      margin-top: 50px;
+      font-size: $font-size-large;
+      font-family: $font1;
+    }
+
+    .paginumb {
+      margin-left: 43px;
+      margin-right: 43px;
+
+      .paginumb1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+        @include breakpoint(tablet) {
+          transform: scale(1.3);
+          margin-right: 30px;
+        }
+      }
+
+      .paginumb2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+        @include breakpoint(tablet) {
+          transform: scale(1.3);
+        }
+      }
+    }
+
+    .paginav, .previous, .next, .paginumb {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      img {
+        width: 13px;
+      }
+    }
+
+    .previous {
+      cursor: pointer;
+      img {
+        transform: rotate(180deg);
+        margin-left: 10px;
+        margin-right: 15px;
+      }
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    .next {
+      cursor: pointer;
+      img {
+        margin-left: 15px;
+      }
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    .active {
+      background-color: $color-yellow;
+      border-radius: 100%;
+    }
+  }    
+}
